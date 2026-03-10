@@ -3,19 +3,21 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 import 'package:go_router/go_router.dart';
+import 'package:krio_app/core/gen/assets.gen.dart';
 
-import '../../../../../core/static/const/app_icons.dart';
 import '../../../../../core/static/theme/theme.dart';
 
-enum UserRole{ user, provider}
-
+enum UserRole { user, provider }
 
 class BottomNavBar extends StatelessWidget {
-  const BottomNavBar({super.key, required this.navigationShell , required this.role,});
+  const BottomNavBar({
+    super.key,
+    required this.navigationShell,
+    required this.role,
+  });
 
   final StatefulNavigationShell navigationShell;
-    final UserRole role;
-
+  final UserRole role;
 
   void _goBranch(int index) {
     navigationShell.goBranch(
@@ -41,45 +43,69 @@ class BottomNavBar extends StatelessWidget {
               destinations: [
                 NavigationRailDestination(
                   icon: SvgPicture.asset(
-                    AppIcons.home,
-                    colorFilter: const ColorFilter.mode(Colors.grey, BlendMode.srcIn),
+                    Assets.icons.homeIcon,
+                    colorFilter: const ColorFilter.mode(
+                      Colors.grey,
+                      BlendMode.srcIn,
+                    ),
                   ),
                   selectedIcon: SvgPicture.asset(
-                    AppIcons.home,
-                    colorFilter: ColorFilter.mode(context.color.scaffoldBackground, BlendMode.srcIn),
+                    Assets.icons.homeIcon,
+                    colorFilter: ColorFilter.mode(
+                      context.color.scaffoldBackground,
+                      BlendMode.srcIn,
+                    ),
                   ),
                   label: const Text('Home'),
                 ),
                 NavigationRailDestination(
                   icon: SvgPicture.asset(
-                    AppIcons.message,
-                    colorFilter: const ColorFilter.mode(Colors.grey, BlendMode.srcIn),
+                    Assets.icons.messageIcon,
+                    colorFilter: const ColorFilter.mode(
+                      Colors.grey,
+                      BlendMode.srcIn,
+                    ),
                   ),
                   selectedIcon: SvgPicture.asset(
-                    AppIcons.message,
-                    colorFilter: ColorFilter.mode(context.color.scaffoldBackground, BlendMode.srcIn),
+                    Assets.icons.messageIcon,
+                    colorFilter: ColorFilter.mode(
+                      context.color.scaffoldBackground,
+                      BlendMode.srcIn,
+                    ),
                   ),
                   label: const Text('Message'),
                 ),
                 NavigationRailDestination(
                   icon: SvgPicture.asset(
-                    AppIcons.bookings,
-                    colorFilter: const ColorFilter.mode(Colors.grey, BlendMode.srcIn),
+                    Assets.icons.bookingIcon,
+                    colorFilter: const ColorFilter.mode(
+                      Colors.grey,
+                      BlendMode.srcIn,
+                    ),
                   ),
                   selectedIcon: SvgPicture.asset(
-                    AppIcons.bookings,
-                    colorFilter: ColorFilter.mode(context.color.scaffoldBackground, BlendMode.srcIn),
+                    Assets.icons.bookingIcon,
+                    colorFilter: ColorFilter.mode(
+                      context.color.scaffoldBackground,
+                      BlendMode.srcIn,
+                    ),
                   ),
                   label: const Text('Bookings'),
                 ),
                 NavigationRailDestination(
                   icon: SvgPicture.asset(
-                    AppIcons.settings,
-                    colorFilter: const ColorFilter.mode(Colors.grey, BlendMode.srcIn),
+                    Assets.icons.settingsIcon,
+                    colorFilter: const ColorFilter.mode(
+                      Colors.grey,
+                      BlendMode.srcIn,
+                    ),
                   ),
                   selectedIcon: SvgPicture.asset(
-                    AppIcons.settings,
-                    colorFilter: ColorFilter.mode(context.color.scaffoldBackground, BlendMode.srcIn),
+                    Assets.icons.settingsIcon,
+                    colorFilter: ColorFilter.mode(
+                      context.color.scaffoldBackground,
+                      BlendMode.srcIn,
+                    ),
                   ),
                   label: const Text('Settings'),
                 ),
@@ -100,22 +126,22 @@ class BottomNavBar extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   TabIcon(
-                    iconPath: AppIcons.home,
+                    iconPath: Assets.icons.homeIcon,
                     isSelected: navigationShell.currentIndex == 0,
                     onTap: () => _goBranch(0),
                   ),
                   TabIcon(
-                    iconPath: AppIcons.message,
+                    iconPath: Assets.icons.messageIcon,
                     isSelected: navigationShell.currentIndex == 1,
                     onTap: () => _goBranch(1),
                   ),
                   TabIcon(
-                    iconPath: AppIcons.bookings,
+                    iconPath: Assets.icons.bookingIcon,
                     isSelected: navigationShell.currentIndex == 2,
                     onTap: () => _goBranch(2),
                   ),
                   TabIcon(
-                    iconPath: AppIcons.settings,
+                    iconPath: Assets.icons.settingsIcon,
                     isSelected: navigationShell.currentIndex == 3,
                     onTap: () => _goBranch(3),
                   ),

@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:krio_app/core/gen/assets.gen.dart';
 
-import '../../../../../core/static/const/app_icons.dart';
 import '../../../../../core/static/theme/src/theme_extensions/src/dimensions.dart';
 import '../../../../../core/static/theme/theme.dart';
 import '../model/message_model.dart';
@@ -93,7 +93,9 @@ class ConversationScreen extends ConsumerWidget {
             //       )
             //     : null,
             border: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(const Dimensions().radius.r30.r),
+              borderRadius: BorderRadius.circular(
+                const Dimensions().radius.r30.r,
+              ),
             ),
             suffixIcon: Padding(
               padding: EdgeInsets.all(const Dimensions().padding.p4.r),
@@ -101,7 +103,7 @@ class ConversationScreen extends ConsumerWidget {
                 backgroundColor: context.color.primary,
                 child: IconButton(
                   icon: SvgPicture.asset(
-                    AppIcons.send,
+                    Assets.icons.send,
                     height: 20.h,
                     width: 20.w,
                   ),
@@ -120,10 +122,14 @@ class ConversationScreen extends ConsumerWidget {
             ),
             hintText: "Type a message",
             enabledBorder: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(const Dimensions().radius.r30.r),
+              borderRadius: BorderRadius.circular(
+                const Dimensions().radius.r30.r,
+              ),
             ),
             focusedBorder: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(const Dimensions().radius.r30.r),
+              borderRadius: BorderRadius.circular(
+                const Dimensions().radius.r30.r,
+              ),
               borderSide: BorderSide(color: context.color.primary),
             ),
             fillColor: context.color.onPrimary,

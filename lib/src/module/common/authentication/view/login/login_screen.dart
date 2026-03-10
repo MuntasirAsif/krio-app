@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
-
+import 'package:krio_app/core/gen/assets.gen.dart';
 
 import '../../../../../../core/routes/route_const.dart';
-import '../../../../../../core/static/const/app_images.dart';
 import '../../../../../../core/static/extensions/localization_extension.dart';
 import '../../../../../../core/static/theme/theme.dart';
 import 'login_form.dart';
@@ -20,9 +19,7 @@ class LoginScreen extends StatelessWidget {
           child: ConstrainedBox(
             constraints: BoxConstraints(maxWidth: 600.w),
             child: Padding(
-              padding: EdgeInsets.symmetric(
-                horizontal: context.padding.p16.r,
-              ),
+              padding: EdgeInsets.symmetric(horizontal: context.padding.p16.r),
               child: SingleChildScrollView(
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.start,
@@ -31,7 +28,7 @@ class LoginScreen extends StatelessWidget {
                     50.verticalSpace,
                     Center(
                       child: Image.asset(
-                        AppImages.logoFull,
+                        Assets.images.logo.path,
                         width: 100.w,
                         height: 100.h,
                       ),
@@ -102,7 +99,7 @@ class LoginScreen extends StatelessWidget {
                       ),
                       onPressed: () {},
                       icon: Image.asset(
-                        AppImages.googleLogo,
+                        Assets.images.googleLogo.path,
                         width: 24.w,
                         height: 24.h,
                       ),
