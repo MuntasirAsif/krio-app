@@ -2,8 +2,8 @@ part of 'colors.dart';
 
 /// Primitive color palette
 class _Primitive {
-  static const Color brand = Color(0xFFF16C31);
-  static const Color brandLight = Color(0xFFEEA572);
+  static const Color brand = Color(0xff6A0DAD);
+  static const Color brandLight = Color(0xFF2EEBFD);
 
   // Neutral colors
   static const Color neutral0 = Color(0xFFFFFFFF);

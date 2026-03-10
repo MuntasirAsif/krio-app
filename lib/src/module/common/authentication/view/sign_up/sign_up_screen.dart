@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:krio_app/core/gen/assets.gen.dart';
 
-import '../../../../../../core/static/const/app_images.dart';
 import '../../../../../../core/static/extensions/localization_extension.dart';
 import '../../../../../../core/static/theme/src/theme_extensions/src/dimensions.dart';
 import '../../../../../../core/static/theme/theme.dart';
@@ -16,13 +16,17 @@ class SignUpScreen extends StatelessWidget {
       appBar: AppBar(),
       body: Padding(
         padding: EdgeInsets.symmetric(
-          horizontal: const Dimensions().padding.p16.w,
+          horizontal: const Dimensions().padding.p16.r,
         ),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
             Center(
-              child: Image.asset(AppImages.logoFull, width: 60.w, height: 60.h),
+              child: Image.asset(
+                Assets.images.logo.path,
+                width: 60.w,
+                height: 60.h,
+              ),
             ),
             10.verticalSpace,
             Center(
